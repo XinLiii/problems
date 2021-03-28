@@ -29,7 +29,6 @@ public class connectNodes {
 		Collections.sort(newEdges,(a,b)->(a.get(2)-b.get(2)));
 		Set<Integer> connected=new HashSet<>();
 		for(List<Integer> newEdge:newEdges){
-//			should do bfs here
 			int n1=newEdge.get(0),n2=newEdge.get(1);
 			if(connected.contains(n1) && connected.contains(n2)) continue;
 			if((graph.containsKey(n1) && graph.get(n1).contains(n2)) || 
@@ -65,6 +64,10 @@ public class connectNodes {
 			}
 		}
 		return minCost;
+	}
+	
+	public class UnionFind<T>{
+		
 	}
 	
 	public static void main(String[] args){
